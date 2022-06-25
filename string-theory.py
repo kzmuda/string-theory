@@ -68,7 +68,18 @@ def is_pangram(text):
     >>> is_pangram('The quick brown fox jumps over the lazy dog')
     True
     """
-    pass
+    # text = ( clear_text(text))
+    # for char in string.ascii_lowercase:
+    #     if (char) not in (text):
+    #         return False
+    # return True        
+        
+    text = ( clear_text(text))
+    diting_letters = set(text)
+    return len(diting_letters) == len(string.ascii_lowercase)
+
+
+    
 
 
 def is_anagram(text1, text2):
@@ -86,4 +97,4 @@ def is_blanagram(text1, text2):
     """
     pass
 text = "Mr. Owl ate my metal worma"
-print(is_palindrome(text))   
+print(is_pangram('The quick brown fox jumps over the lazy do'))  
