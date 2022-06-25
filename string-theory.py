@@ -1,12 +1,26 @@
-def is_palindrome(text):
-    """
-    >>> is_palindrome('Mr. Owl ate my metal worm')
-    True
-    >>> is_palindrome('Eva, can I see bees in a cave?')
-    True
-    """
-    pass
+import string
 
+
+def is_palindrome(text):
+    text = clear_text(text)
+    # for i in range(0,len(text)//2):
+    #     if text[i] != text[-i-1]:
+    #         return False
+    # return True
+    # backwards = text[::-1]
+    return text[::-1] == text
+
+
+
+def clear_text(text):
+    # check = ["a", "b", "c"]
+    text = text.lower()
+    letters = []
+    for char in text:
+        if char in string.ascii_lowercase:
+            letters.append(char)
+    
+    return letters    
 
 def is_isogram(text):
     """
@@ -38,3 +52,5 @@ def is_blanagram(text1, text2):
     True
     """
     pass
+text = "Mr. Owl ate my metal worma"
+print(is_palindrome(text))   
