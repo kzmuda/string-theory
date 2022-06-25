@@ -11,7 +11,6 @@ def is_palindrome(text):
     return text[::-1] == text
 
 
-
 def clear_text(text):
     # check = ["a", "b", "c"]
     text = text.lower()
@@ -87,7 +86,7 @@ def is_anagram(text1, text2):
     >>> is_anagram('Justin Timberlake', "I'm a jerk but listen")
     True
     """
-    pass
+    return sorted(text1) == sorted(text2)
 
 
 def is_blanagram(text1, text2):
@@ -96,5 +95,9 @@ def is_blanagram(text1, text2):
     True
     """
     pass
-text = "Mr. Owl ate my metal worma"
+
+text1 = "samolot"
+text2 = "lotsamo"
+
+print("Is", text1, "and", text2, "anagrams?", is_anagram(text1, text2))
 print(is_pangram('The quick brown fox jumps over the lazy do'))  
